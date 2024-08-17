@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Example to load a CSV file
-    fetch('../all_players.csv')
+    fetch('all_players.csv')
     .then(response => response.text())
     .then(data => createTableFromCSV(data));
 });
