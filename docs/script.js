@@ -1,8 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const tableContainer = document.getElementById('table-container');
 
     // Function to create a table from CSV data
-    function createTableFromCSV(csvData) {
+    function createTableFromCSV(csvData, tableContainer) {
         const rows = csvData.split('\n');
         const table = document.createElement('table');
         
@@ -18,12 +17,23 @@ document.addEventListener('DOMContentLoaded', function() {
             
             table.appendChild(tr);
         });
-
+        console.log(table)
         tableContainer.appendChild(table);
     }
 
-    // Example to load a CSV file
-    fetch('all_players.csv')
-    .then(response => response.text())
-    .then(data => createTableFromCSV(data));
+    function setPage(page) {
+        dispTable(page)
+    }
+    window.setPage = setPage
+
+    function dispTable(page) {
+        const table = document.getElementById('table');
+        table.textContent = "";
+        fetch(`../${page}.csv`)
+        .then(response => response.text())
+        .then(data => createTableFromCSV(data, table));
+    }
+
+    let page = 'all_players'
+    dispTable(page)
 });
