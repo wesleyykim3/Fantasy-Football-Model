@@ -47,11 +47,11 @@ document.addEventListener('DOMContentLoaded', function() {
     function dispTable(page) {
         const table = document.getElementById('table');
         table.textContent = "";
-        fetch(`../${page}.csv`)
+        fetch(`${page}.csv`)
         .then(response => response.text())
         .then(data => createTableFromCSV(data, table));
     }
 
-    let page = 'tes'
+    let page = 'all_players'
     dispTable(page)
 });
