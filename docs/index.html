@@ -3,21 +3,39 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>2024 Fantasy Football Player Rankings</title>
+        <link rel="stylesheet", href="styles.css">
+        <title>Fantasy Football Player Rankings 2024</title>
     </head>
+    <header>
+        <h1 class="line1">Wesley's</h1>
+        <h1 class="line2">Fantasy Football</h1>
+        <h1 class="line3">Rankings <span>2024</span></h1>
+        <div class="image-container">
+            <img src="lamarjackson.jpg" class="lamar">
+            <img src="christianmcaffrey.jpg" class="cmc">
+            <img src="calebwilliams.jpg" class="caleb">
+            <img src="jamarrchase.jpg" class="jamarr">
+        </div>
+    </header>
     <body>
-        </script>
-        <h1>
-            <center>2024 Fantasy Football Player Rankings</center>
-        </h1>
-        <center><div id="dashboard">
+        <p class="blurb">
+            Hi everyone and welcome to my Fantasy Football Predictive Model for the 2024 season! 
+            My name is Wesley and I'm an avid fooball fan and fantasy football player, as well as 
+            commissioner of my league. This website is the culmination of a personal project I've 
+            been working on that was inspired from my love of fantasy football. 
+            The rankings you see below are the reuslt of extensive data scraping, cleaning, and 
+            machine learning experimentation aimed at predicting fantasy football points for players.
+            Feel free to use these rankings during your draft and hopefully they'll give you an edge
+            over your fellow league mates!
+        </p>
+        <div class="dashboard">
             <button onclick="setPage('all_players')">All Players</button>
             <button onclick="setPage('qbs')">QB</button>
             <button onclick="setPage('rbs')">RB</button>
             <button onclick="setPage('wrs')">WR</button>
             <button onclick="setPage('tes')">TE</button>
-        </div></center>
-        <center><div id="table"></div></center>
+        </div>
+        <div id="table"></div>
         <script src="script.js"></script>
     </body>
 
