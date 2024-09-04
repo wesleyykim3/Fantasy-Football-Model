@@ -1,4 +1,4 @@
-# FantasyFootballModel
+# Fantasy-Football-Model
 
 ## Overview
 This project involves building a comprehensive predictive model for 2024 fantasy football points. The model was engineered using Python, leveraging eight years of web-scraped historical data. The project includes end-to-end data scraping, cleaning, preprocessing, machine learning model development, and the creation of a user-friendly web application to display predictions.
